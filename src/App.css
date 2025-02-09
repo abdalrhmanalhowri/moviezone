@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 @custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
@@ -16,7 +15,7 @@
 * {
   font-family: "Lato";
 }
-.logo {
+/* .logo {
   width: 180px;
   margin-bottom: 48px;
-}
+} */
