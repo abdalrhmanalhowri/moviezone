@@ -1,5 +1,4 @@
 import React from "react";
-
 const VoteAverage = ({ movie }) => {
   const stars = (movie.vote_average / 2).toFixed(1);
   return (

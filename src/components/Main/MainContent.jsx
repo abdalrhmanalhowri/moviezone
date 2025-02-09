@@ -5,7 +5,8 @@ const MainContent = () => {
   return (
     <div>
       <GenresSelector />
-      <MoviesList />
+      <MoviesList moviesTitle="Popular" moviesSection="popular" />
+      <MoviesList moviesTitle="Top Rated" moviesSection="top_rated" />
     </div>
   );
 };

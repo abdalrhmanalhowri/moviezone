@@ -4,9 +4,11 @@ import Logo from "./Logo";
 const SideBar = () => {
   return (
     <div className="col-span-3">
-      <Logo className={"mb-[68px]"} />
-      <h1>SideBar</h1>
-      <SidebarMenu />
+      <div className="fixed z-50 ">
+        <Logo className={"mb-[68px]"} />
+        <h1>SideBar</h1>
+        <SidebarMenu />
+      </div>
     </div>
   );
 };
