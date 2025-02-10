@@ -1,25 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import apiTmdb from "../services/api-tmdb.js";
 import { CanceledError } from "axios";
+import useData from "./useData.js";
 
-const useMovies = ({ type }) => {
-  const [movies, setMovies] = useState([]);
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    const controller = new AbortController();
-    apiTmdb
-      .get(`/movie/${type}`, { signal: controller.signal })
-      .then((res) => setMovies(res.data.results))
-      .catch((err) => {
-        if (err instanceof CanceledError) return;
-        setError(err.message);
-      });
-
-    return () => controller.abort();
-  }, []);
-
-  return { movies, error };
-};
+const useMovies = ({ type, section, deps }) =>
+  useData({
+    Urlendpoint: section ? `${type}/${section}` : `${type}`,
+    dataKey: "results",
+    deps: deps,
+  });
 
 export default useMovies;

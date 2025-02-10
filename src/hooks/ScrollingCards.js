@@ -15,10 +15,6 @@ const ScrollingCards = ({ SizeScrolling }) => {
     } else {
       setScrollPosition(newScrollPosition);
     }
-
-    console.log(scrollAmout);
-    console.log(`scroll ${scrollPosition}`);
-
     containerRef.current.scrollLeft = newScrollPosition;
   };
   return { containerRef, handleScroll, CardWidth };
