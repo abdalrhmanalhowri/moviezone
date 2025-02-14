@@ -5,6 +5,12 @@ const MoviesCard = ({ movies, type }) => {
   const img = movies.poster_path
     ? `https://image.tmdb.org/t/p/w500/${movies.poster_path}`
     : image;
+
+  const title = movies.name ? movies.name : movies.title;
+
+  const date = movies.first_air_date
+    ? movies.first_air_date
+    : movies.release_date;
   return (
     <div className="mb-6 MoviesCards ">
       <a href="">
@@ -17,11 +23,9 @@ const MoviesCard = ({ movies, type }) => {
       <div>
         <VoteAverage movie={movies} />
         <a href="#" className="font-bold text-lg hover:text-[#BA181B]">
-          {type === "tv" ? movies.name : movies.title}
+          {title}
         </a>
-        <p className="text-sm">
-          {type === "tv" ? movies.first_air_date : movies.release_date}
-        </p>
+        <p className="text-sm">{date}</p>
       </div>
     </div>
   );
