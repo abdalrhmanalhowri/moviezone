@@ -1,12 +1,12 @@
 import React from "react";
 import Search from "./Search.jsx";
-import Theme from "./theme";
+import Theme from "./Theme.jsx";
 import Profile from "./Profile.jsx";
-const Navbar = () => {
+const Navbar = ({ setSearchText }) => {
   return (
     <div className="w-full flex justify-between mb-12">
-      <div className="flex gap-5">
-        <Search />
+      <div className="flex gap-5 w-[60%]">
+        <Search setSearchText={setSearchText} />
         <Theme />
       </div>
 

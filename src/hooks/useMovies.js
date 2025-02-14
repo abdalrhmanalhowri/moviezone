@@ -1,13 +1,17 @@
-import { useEffect, useState } from "react";
-import apiTmdb from "../services/api-tmdb.js";
-import { CanceledError } from "axios";
 import useData from "./useData.js";
 
-const useMovies = ({ type, section, deps }) =>
-  useData({
-    Urlendpoint: section ? `${type}/${section}` : `${type}`,
-    dataKey: "results",
-    deps: deps,
-  });
+const useMovies = ({ type, section, deps, genre, pages, searchText }) =>
+  useData(
+    {
+      Urlendpoint: section ? `${type}/${section}` : `${type}`,
+      dataKey: "results",
+      deps: deps,
+      pages: pages,
+      searhText: searchText,
+    },
+    {
+      ...(genre?.id ? { with_genres: genre?.id } : {}),
+    }
+  );
 
 export default useMovies;

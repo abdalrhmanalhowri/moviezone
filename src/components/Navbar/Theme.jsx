@@ -18,9 +18,9 @@ const Theme = () => {
   };
   let bgColor = theme === "dark" ? "bg-[#1A1A1A]" : "bg-[#DEDEDE]";
   return (
-    <div className="flex gap-5 items-center">
+    <div className="flex gap-5 items-center ">
       <button
-        className={`${bgColor} w-12 h-12 rounded-full p-3`}
+        className={`${bgColor} w-12 h-12 rounded-full p-3 `}
         onClick={ToggleTheme}
       >
         <img
