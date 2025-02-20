@@ -8,7 +8,7 @@ const Search = ({ setSearchText }) => {
   };
 
   return (
-    <div className="w-[80%] flex gap-5 dark:bg-[#1A1A1A] p-3 rounded-full bg-[#DEDEDE]">
+    <div className="w-[80%] flex gap-5 dark:bg-[#1A1A1A] p-3 rounded-full bg-[#DEDEDE] ">
       <a href="#" onClick={(e) => e.preventDefault()}>
         <IoSearchOutline size={20} />
       </a>
