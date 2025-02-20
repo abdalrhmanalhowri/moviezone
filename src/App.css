@@ -20,3 +20,15 @@ a {
   flex: 0 0 200px;
   width: 200px;
 }
+
+@media (max-width: 1440px) {
+  .DiscoverList {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .MoviesCards {
+    width: 180px;
+  }
+  .logo {
+    width: 150px;
+  }
+}

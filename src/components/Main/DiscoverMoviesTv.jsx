@@ -32,7 +32,7 @@ const DiscoverMoviesTv = ({
         <h2 className="font-bold mb-10 text-2xl">
           {type === "movie" ? "MOVIES" : type === "tv" ? "SERIES" : ""}
         </h2>
-        <div className="grid grid-cols-7">
+        <div className="grid grid-cols-7 DiscoverList">
           {Loading &&
             skeletons.map((skeleton) => <CardsSkeleton key={skeleton} />)}
           {Data.length === 0 && !Loading && (
